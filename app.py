@@ -7,22 +7,22 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 @app.route('/Sasquatch')
-def Welcome():
+def get_index():
     return render_template('index.html')
 
-@app.route('/dashboard')
+@app.route("/dashboard")
 def dashboard():
     return render_template('dashboard.html')
 
-@app.route('/sighting')
+@app.route("/sighting")
 def sighting():
     return render_template('edit.html')
 
-@app.route('/edit')
+@app.route("/edit")
 def edit():
     return render_template('edit.html')
 
-@app.route('/show')
+@app.route("/show")
 def show():
     return render_template('show.html')
 
